@@ -1,0 +1,46 @@
+app-title:
+MJ Device Management
+
+app-version:
+1.0
+
+cwd:
+E:\Workshop\doc\ZZ郑州机器人\project\device_management\device_management
+
+date:
+Tue Oct 13 10:18:05 2015
+
+e-type:
+<type 'exceptions.AttributeError'>
+
+e-value:
+TcpRequestParser instance has no attribute 'createResponse'
+
+locals:
+    self: <plugins.tcp_server.tcp_comm_plugins.TaskOrderRequestHandler instance at 0x0476F8F0>
+    orders: []
+    new_task: <tasks.task.Task instance at 0x04798F80>
+
+platform:
+Windows-7-6.1.7601-SP1
+
+python-version:
+2.7.5
+
+self:
+    request_parser: <config.tcp_request_parser.TcpRequestParser instance at 0x0476F850>
+    app: <__main__.App object at 0x04792610>
+
+traceback:
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\exception_handler.py", line 70, in run_with_except_hook
+    run_old(*args, **kw)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 177, in run
+    response = self.handleRequest(request)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 162, in handleRequest
+    response = self.request_handler.handleRequest(request)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 126, in handleRequest
+    response = self.crateAndAddNewTask(orders)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 140, in crateAndAddNewTask
+    return self.request_parser.createResponse(True, new_task)
+<type 'exceptions.AttributeError'>: TcpRequestParser instance has no attribute 'createResponse'
+

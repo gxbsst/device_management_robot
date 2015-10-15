@@ -1,0 +1,43 @@
+app-title:
+MJ Device Management
+
+app-version:
+1.0
+
+cwd:
+E:\Workshop\doc\ZZ郑州机器人\project\device_management\device_management
+
+date:
+Tue Oct 13 10:16:19 2015
+
+e-type:
+<type 'exceptions.AttributeError'>
+
+e-value:
+TcpRequestParser instance has no attribute 'getType'
+
+locals:
+    self: <plugins.tcp_server.tcp_comm_plugins.TaskOrderRequestHandler instance at 0x0371C8F0>
+    request: '<?xml version="1.0"?>\n  <ProductionOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >\n    <workorder device="1" program_no="6001"/>\n<workorder device="2" program_no="6002"/>\n</ProductionOrder>'
+
+platform:
+Windows-7-6.1.7601-SP1
+
+python-version:
+2.7.5
+
+self:
+    request_parser: <config.tcp_request_parser.TcpRequestParser instance at 0x0371C918>
+    app: <__main__.App object at 0x037435F0>
+
+traceback:
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\exception_handler.py", line 70, in run_with_except_hook
+    run_old(*args, **kw)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 177, in run
+    response = self.handleRequest(request)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 162, in handleRequest
+    response = self.request_handler.handleRequest(request)
+  File "E:/Workshop/doc/ZZ郑州机器人/project/device_management/device_management\plugins\tcp_server\tcp_comm_plugins.py", line 122, in handleRequest
+    type = self.request_parser.getType(request)
+<type 'exceptions.AttributeError'>: TcpRequestParser instance has no attribute 'getType'
+
